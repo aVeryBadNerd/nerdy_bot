@@ -4,8 +4,6 @@ const { Collection } = require('discord.js');
 client.commands = new Collection();
 CommandsArray = [];
 
-
-
 const events = readdirSync('./events/').filter(file => file.endsWith('.js'));
 
 console.log(`Loading events...`);
@@ -34,6 +32,6 @@ readdirSync('./commands/').forEach(dirs => {
 });
 
 client.on('ready', (client) => {
- if (client.config.app.global) client.application.commands.set(CommandsArray)
-  else client.guilds.cache.get(client.config.app.guild).commands.set(CommandsArray)
+ if (process.env.DISCORD_GLOBAL) client.application.commands.set(CommandsArray)
+  else client.guilds.cache.get(process.env.DISCORD_GUILDID).commands.set(CommandsArray)
 })

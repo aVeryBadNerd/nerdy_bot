@@ -1,8 +1,6 @@
 module.exports = {
     app: {
         playing: 'with Ray ❤️',
-        global: false,
-        guild: '800761144792055828'
     },
 
     opt: {

@@ -1,3 +1,9 @@
+# TO LAUNCH
+
+```
+docker build -t nerdy-bot . && ddocker run -d -e DISCORD_TOKEN=xxx -e DISCORD_GUILDID=yyy -e DISCORD_GLOBAL=true||false --name nerdy-bot nerdy-bot
+```
+
 # Music-bot
 
 A complete code to download for a music bot 🎧
